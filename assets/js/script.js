@@ -27,20 +27,7 @@ for (let i = 0; i < navbarLinks.length; i++) {
   });
 }
 
-// alert-handler.js
 
-// Wait for the DOM to fully load (optional, depends on where script is included)
-document.addEventListener("DOMContentLoaded", function () {
-  const sendButton = document.getElementById("btn-submit");
-
-  if (sendButton) {
-    sendButton.addEventListener("click", function () {
-      alert("The server is slow. Kindly contact through other ways.");
-    });
-  } else {
-    console.warn("Button with ID 'sendButton' not found.");
-  }
-});
 
 
 
