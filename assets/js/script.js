@@ -18,7 +18,7 @@ navToggleBtn.addEventListener("click", function () {
  * toggle the navbar when click any navbar link
  */
 
-const navbarLinks = document.querySelectorAll("[data-nav-link]");
+const navbarLinks = document.querySelectorAll("[.btn-submit]");
 
 for (let i = 0; i < navbarLinks.length; i++) {
   navbarLinks[i].addEventListener("click", function () {
@@ -27,7 +27,20 @@ for (let i = 0; i < navbarLinks.length; i++) {
   });
 }
 
+// alert-handler.js
 
+// Wait for the DOM to fully load (optional, depends on where script is included)
+document.addEventListener("DOMContentLoaded", function () {
+  const sendButton = document.getElementById("sendButton");
+
+  if (sendButton) {
+    sendButton.addEventListener("click", function () {
+      alert("The server is slow. Kindly contact through other ways.");
+    });
+  } else {
+    console.warn("Button with ID 'sendButton' not found.");
+  }
+});
 
 
 
